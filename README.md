@@ -1,12 +1,8 @@
-Collection of Shell / Bash Setup Scripts
+基于debian8.0-amd64常用一键工具集
 ========================================
 
-**Mostly just for apt-get / aptitude based distributions (Debian, Ubuntu)**
+本内容来自以下仓库：
+https://github.com/Paulmicha/debian-quickup.git
 
-These are meant for quickly setting up local dev environments (typically VirtualBox VMs), when there's no Vagrant / Docker / Ansible / Puppet / Chef / whatever automation (or PaaS / SaaS) available at hand.
+在此基础上，我有新增，修正，合并等一系列操作，使之更加完善，以此可以快速构建各类基于debian系统下的所需环境：
 
-Re-organization 2014/11/27 :
-- Arbitrary categorization in folders
-- Naming convention to differenciate notes for a manual step by step procedure (filename.notes.sh) from actual executable scripts (filename.script.sh) that have been tested at least once successfully in indicated environment.
-
-@license MIT
