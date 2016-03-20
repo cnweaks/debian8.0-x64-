@@ -1,0 +1,35 @@
+chmod a+x debian_lamp.sh
+bash debian_lamp.sh init
+bash debian_lamp.sh install
+在安装的过程中，会要求你输入mysql的root密码。
+bash debian_lamp.sh addvhost
+添加虚拟机过程中，需要输入以下参数:
+1）hostname，你的要添加的网站域名（如tennfy.com，注意是域名，不是单个的名字如tennfy）
+例：
+input hostname(like cnweak.com):tennfy.com
+
+配置
+
+网站目录：      /var/www/hostname
+apache目录：    /etc/apache2
+apache配置文件： /etc/apache2/sites-enabled/hostname
+mysql目录：    /etc/mysql  
+php目录：      /etc/php5
+php.ini：      /etc/php5/fpm/php.ini
+
+
+操作命令
+重启mysql: /etc/init.d/mysql restart
+重启php：  /etc/init.d/php5-fpm restart
+重启apache: /etc/init.d/apache2 restart
+
+
+注意
+
+1、phpmyadmin的使用
+phpmyadmin在 /var/www 目录下，在使用时请将其移动至你的web目录进行访问，命令如下
+cd /var/www
+mv  phpMyAdmin ./hostname
+其中hostname为你在第二步建立的web目录（如tennfy.com）
+
+然后请访问 hostname/phpMyAdmin/index.php 进行访问（如tennfy.com/phpMyAdmin/index.php）。
